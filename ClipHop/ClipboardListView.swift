@@ -23,7 +23,7 @@ struct ClipboardListView: View {
                         monitor.restore(item)
                     } label: {
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(item.text)
+                            Text(item.plainText ?? "")
                                 .lineLimit(2)
                                 .multilineTextAlignment(.leading)
                             Text(item.date, style: .relative)

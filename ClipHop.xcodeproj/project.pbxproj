@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2140C5980846F88AC6613EA3 /* ClipboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D899FB9A2DBFAC888649F /* ClipboardMonitor.swift */; };
+		C7B9D4D01EAFBB793FE6F1D8 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E0536733AF72EFF14A860B /* ClipboardItem.swift */; };
 		D50D6CF32B021941C64DCF85 /* ClipHopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AABACA17AA2C69105B39B7 /* ClipHopApp.swift */; };
 		FF3546EE4E597CF2F9B7F425 /* ClipboardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA035ACF75DC54FC020FE6 /* ClipboardListView.swift */; };
 /* End PBXBuildFile section */
@@ -17,6 +18,7 @@
 		65DA035ACF75DC54FC020FE6 /* ClipboardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardListView.swift; sourceTree = "<group>"; };
 		70AABACA17AA2C69105B39B7 /* ClipHopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipHopApp.swift; sourceTree = "<group>"; };
 		800D899FB9A2DBFAC888649F /* ClipboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMonitor.swift; sourceTree = "<group>"; };
+		D9E0536733AF72EFF14A860B /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -31,6 +33,7 @@
 		E56BDBE14464815B01CB483F /* ClipHop */ = {
 			isa = PBXGroup;
 			children = (
+				D9E0536733AF72EFF14A860B /* ClipboardItem.swift */,
 				65DA035ACF75DC54FC020FE6 /* ClipboardListView.swift */,
 				800D899FB9A2DBFAC888649F /* ClipboardMonitor.swift */,
 				70AABACA17AA2C69105B39B7 /* ClipHopApp.swift */,
@@ -102,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D50D6CF32B021941C64DCF85 /* ClipHopApp.swift in Sources */,
+				C7B9D4D01EAFBB793FE6F1D8 /* ClipboardItem.swift in Sources */,
 				FF3546EE4E597CF2F9B7F425 /* ClipboardListView.swift in Sources */,
 				2140C5980846F88AC6613EA3 /* ClipboardMonitor.swift in Sources */,
 			);
