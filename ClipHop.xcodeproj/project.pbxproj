@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		2140C5980846F88AC6613EA3 /* ClipboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D899FB9A2DBFAC888649F /* ClipboardMonitor.swift */; };
+		3358CEE72AB1C03DD449729B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106B519702ACF05B6C6B66C3 /* AppDelegate.swift */; };
+		B61B8985191FA3D1C8A83AFB /* WindowConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AF48F871FA569ACF1729D8 /* WindowConfigurator.swift */; };
 		C7B9D4D01EAFBB793FE6F1D8 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E0536733AF72EFF14A860B /* ClipboardItem.swift */; };
 		D50D6CF32B021941C64DCF85 /* ClipHopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AABACA17AA2C69105B39B7 /* ClipHopApp.swift */; };
 		FF3546EE4E597CF2F9B7F425 /* ClipboardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DA035ACF75DC54FC020FE6 /* ClipboardListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106B519702ACF05B6C6B66C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27764CF186FE66BCD144027B /* ClipHop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipHop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53AF48F871FA569ACF1729D8 /* WindowConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowConfigurator.swift; sourceTree = "<group>"; };
 		65DA035ACF75DC54FC020FE6 /* ClipboardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardListView.swift; sourceTree = "<group>"; };
 		70AABACA17AA2C69105B39B7 /* ClipHopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipHopApp.swift; sourceTree = "<group>"; };
 		800D899FB9A2DBFAC888649F /* ClipboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMonitor.swift; sourceTree = "<group>"; };
@@ -33,10 +37,12 @@
 		E56BDBE14464815B01CB483F /* ClipHop */ = {
 			isa = PBXGroup;
 			children = (
+				106B519702ACF05B6C6B66C3 /* AppDelegate.swift */,
 				D9E0536733AF72EFF14A860B /* ClipboardItem.swift */,
 				65DA035ACF75DC54FC020FE6 /* ClipboardListView.swift */,
 				800D899FB9A2DBFAC888649F /* ClipboardMonitor.swift */,
 				70AABACA17AA2C69105B39B7 /* ClipHopApp.swift */,
+				53AF48F871FA569ACF1729D8 /* WindowConfigurator.swift */,
 			);
 			path = ClipHop;
 			sourceTree = "<group>";
@@ -104,10 +110,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3358CEE72AB1C03DD449729B /* AppDelegate.swift in Sources */,
 				D50D6CF32B021941C64DCF85 /* ClipHopApp.swift in Sources */,
 				C7B9D4D01EAFBB793FE6F1D8 /* ClipboardItem.swift in Sources */,
 				FF3546EE4E597CF2F9B7F425 /* ClipboardListView.swift in Sources */,
 				2140C5980846F88AC6613EA3 /* ClipboardMonitor.swift in Sources */,
+				B61B8985191FA3D1C8A83AFB /* WindowConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +130,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ClipHop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -139,6 +148,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = ClipHop;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
