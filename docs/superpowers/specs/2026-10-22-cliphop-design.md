@@ -89,7 +89,7 @@ struct ClipboardItem: Identifiable, Equatable {
 - 每次变化时的提取优先级：
   1. `string(forType: .string)` 非空 → 记 `.text`
   2. 否则读 `NSImage`（`readObjects(forClasses: [NSImage.self])`），转 PNG data 后记 `.image`
-  3. PNG data 超过 **10MB** → 跳过该条
+  3. PNG data 超过 **10MB** → 跳过该条（单条存储上限：防最坏情况 50 条 × 10MB ≈ 500MB 内存）
   4. 两者都没有 → 忽略
 - 去重：同内容已在列表中 → 不重复插入（现有"移动到顶部"语义对"点击不改剪贴板"的流程无意义，保留首见位置即可；若首条相同则直接忽略）
 - 上限 50 条，超出移除最旧
