@@ -1,0 +1,17 @@
+name: ClipHop
+options:
+  bundleIdPrefix: com.cliphop
+  deploymentTarget:
+    macOS: "13.0"
+targets:
+  ClipHop:
+    type: application
+    platform: macOS
+    sources:
+      - path: ClipHop
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: ClipHop
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+        COMBINE_HIDPI_IMAGES: YES
