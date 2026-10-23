@@ -40,8 +40,4 @@ final class ClipboardMonitor: ObservableObject {
         case .image(let png): pb.setData(png, forType: .png)
         }
     }
-
-    func clear() {
-        items.removeAll()
-    }
 }
