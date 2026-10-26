@@ -23,23 +23,47 @@ struct ClipboardListView: View {
                 }
                 .frame(width: 360, height: 180)
             } else {
-                List {
-                    ForEach(Array(monitor.items.enumerated()), id: \.element.id) { index, item in
-                        Button {
-                            paste(item)
-                        } label: {
-                            Text(item.plainText ?? "")
-                                .lineLimit(2)
-                                .multilineTextAlignment(.leading)
-                                .padding(.vertical, 2)
+                // 不用 List：macOS 上 List 不响应 ScrollViewReader.scrollTo（实测），
+                // ScrollView + LazyVStack 是文档明确支持该 API 的组合
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        LazyVStack(spacing: 0) {
+                            ForEach(Array(monitor.items.enumerated()), id: \.element.id) { index, item in
+                                Button {
+                                    paste(item)
+                                } label: {
+                                    Text(item.plainText ?? "")
+                                        .lineLimit(2)
+                                        .multilineTextAlignment(.leading)
+                                        .padding(.vertical, 6)
+                                        .padding(.horizontal, 8)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                }
+                                .buttonStyle(.plain)
+                                .background {
+                                    if index == selectedIndex {
+                                        RoundedRectangle(cornerRadius: 5)
+                                            .fill(Color.blue.opacity(0.25))
+                                            .padding(.horizontal, 5)
+                                    }
+                                }
+                                .help("点击切换到此内容")
+                                .id(item.id)
+
+                                if index < monitor.items.count - 1 {
+                                    Divider()
+                                }
+                            }
                         }
-                        .buttonStyle(.plain)
-                        .listRowBackground(index == selectedIndex ? Color.blue.opacity(0.25) : Color.clear)
-                        .help("点击切换到此内容")
+                        .padding(.horizontal, 10)
+                    }
+                    .frame(height: 320)
+                    .onChange(of: selectedIndex) { _ in
+                        // 高亮随 ↑↓ 移动，滚动做最小位移让选中行保持可见
+                        guard selectedIndex < monitor.items.count else { return }
+                        proxy.scrollTo(monitor.items[selectedIndex].id)
                     }
                 }
-                .listStyle(.inset)
-                .frame(height: 320)
             }
         }
         .onChange(of: monitor.items.count) { newCount in
